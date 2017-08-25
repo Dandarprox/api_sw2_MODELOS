@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_entrenador: MyString
+  num_integrantes: 
+  tipo_depo: MyText
+
+two:
+  nombre_entrenador: MyString
+  num_integrantes: 
+  tipo_depo: MyText

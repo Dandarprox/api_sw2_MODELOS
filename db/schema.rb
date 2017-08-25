@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 20170825204750) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "deportes", force: :cascade do |t|
+    t.string "nombre_entrenador"
+    t.integer "num_integrantes"
+    t.text "tipo_depo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "estudiantes", force: :cascade do |t|
     t.string "nombre"
     t.integer "edad"
