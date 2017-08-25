@@ -1,36 +1,36 @@
 require 'test_helper'
 
-class LibrosControllerTest < ActionDispatch::IntegrationTest
+class ProfesorsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @libro = libros(:one)
+    @profesor = profesors(:one)
   end
 
   test "should get index" do
-    get libros_url, as: :json
+    get profesors_url, as: :json
     assert_response :success
   end
 
-  test "should create libro" do
+  test "should create profesor" do
     assert_difference('Profesor.count') do
-      post libros_url, params: { libro: { titulo: @libro.titulo, iso: @libro.iso, resumen: @libro.resumen } }, as: :json
+      post profesors_url, params: { profesor: { depto: @profesor.depto, edad: @profesor.edad, nombre: @profesor.nombre } }, as: :json
     end
 
     assert_response 201
   end
 
-  test "should show libro" do
-    get libro_url(@libro), as: :json
+  test "should show profesor" do
+    get profesor_url(@profesor), as: :json
     assert_response :success
   end
 
-  test "should update libro" do
-    patch libro_url(@libro), params: { libro: { titulo: @libro.titulo, iso: @libro.iso, resumen: @libro.resumen } }, as: :json
+  test "should update profesor" do
+    patch profesor_url(@profesor), params: { profesor: { depto: @profesor.depto, edad: @profesor.edad, nombre: @profesor.nombre } }, as: :json
     assert_response 200
   end
 
-  test "should destroy libro" do
-    assert_difference('Libro.count', -1) do
-      delete libro_url(@libro), as: :json
+  test "should destroy profesor" do
+    assert_difference('Profesor.count', -1) do
+      delete profesor_url(@profesor), as: :json
     end
 
     assert_response 204

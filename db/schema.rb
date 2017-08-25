@@ -44,4 +44,12 @@ ActiveRecord::Schema.define(version: 20170825204750) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "universidads", force: :cascade do |t|
+    t.string "nombre"
+    t.text "ciudad"
+    t.integer "num_sedes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
