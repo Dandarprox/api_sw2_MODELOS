@@ -44,6 +44,14 @@ ActiveRecord::Schema.define(version: 20170825204750) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "restaurants", force: :cascade do |t|
+    t.string "nombre"
+    t.integer "num_local"
+    t.text "tipo_comida"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "universidads", force: :cascade do |t|
     t.string "nombre"
     t.text "ciudad"
