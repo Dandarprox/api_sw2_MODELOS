@@ -2,7 +2,7 @@ class CreateEstudiantes < ActiveRecord::Migration[5.1]
   def change
     create_table :estudiantes do |t|
       t.string :nombre
-      t.int :edad
+      t.integer :edad
       t.text :carrera
 
       t.timestamps
